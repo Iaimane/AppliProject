@@ -1,20 +1,42 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View } from 'react-native'
+import React from 'react'
 
-export default function App() {
+const App = () => {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
+    <View>
+      <Text>My name is {getNames('Francoise', 'Elodie', 'Lucie')}</Text>
     </View>
-  );
+  )
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+export default App
+
+const getNames = (firstName, secondName, thirdName) => {
+  return firstName + "" + secondName + "" + thirdName;
+}
+
+
+//TEST STYLE EXTERNALISE
+// export default function App () {
+//   return (
+//     <View style= {styles.wrapper}>
+//       <View style= {styles.viewONe}>
+//         <Text style={styles.textOne}>Premier pas React Native</Text>
+//         <Text style={styles.textOne}>Début</Text>
+//         <Text style={styles.textOne}>C'est moche</Text>
+//       </View>
+
+//       <View style={styles.viewTwo}>
+//         <Text style={styles.textTwo}>Deuxième pas React Native</Text>
+//       </View>
+//     </View>
+//   )
+// }
+
+// const styles = StyleSheet.create({
+//   wrapper : {marginTop: 50, flexDirection: 'column'},
+//   viewONe : {backgroundColor: 'lightpink'},
+//   textOne : {fontFamily: 'Cochin'},
+//   viewTwo :{backgroundcolor: 'purple'},
+//   textTwo : {fontFamily: 'Cochin', fontSize: 20, fontWeight: 'bold'},
+// })
